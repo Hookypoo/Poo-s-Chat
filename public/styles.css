@@ -17,33 +17,38 @@ h2 {
   max-width: 400px;
   margin: 30px auto;
   text-align: center;
-  border: 1px solid #ddd;
+  /*border: 1px solid #ddd;*/
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  background: #f9f9f9;
+  background: rgb(241, 117, 117) /*#f9f9f9*/;
 }
 
 .chat-window {
   height: 400px;
   overflow: auto;
   border-radius: 10px;
-  background: #f9f9f9;
+  background: lightcyan /*#f9f9f9*/;
 }
 
-.output p {
+#output p {
   padding: 14px 0px;
   margin: 0 20px;
-  border-bottom: 1px solid #e9e9e9;
+  text-align: left;
+  /*border-bottom: 1px solid#e9e9e9;*/
+  border: 1px solid greenyellow;
+  border-radius: 10px;
+  margin-bottom: 3px;
+  padding-left: 10px;
   color: #555;
 }
 
-.feedback p {
+#feedback p {
   color: #aaa;
   padding: 14px 0px;
   margin: 0 20px;
 }
 
-.output strong {
+#output strong {
   color: #575ed8;
 }
 
@@ -57,13 +62,15 @@ input {
   padding: 10px 20px;
   box-sizing: border-box;
   background: #eee;
-  border: 0;
+  /*border: 1 px solid gray;*/
+  border-radius: 5px;
   display: block;
-  width: 100%;
+  width: 98%;
   background: #fff;
-  border-bottom: 1px solid #eee;
+  /*border-bottom: 1px solid #eee;*/
   font-family: Nunito;
   font-size: 16px;
+  margin: 3px auto 3px auto;
 }
 
 button {
@@ -75,4 +82,8 @@ button {
   width: 50%;
   border-radius: 5px;
   margin: 10px 0 10px 0;
+}
+
+time {
+  color: red;
 }
