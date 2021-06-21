@@ -1,7 +1,6 @@
 body {
   font-family: "Nunito";
   height: 100%;
-  /* background-color: #555; */
   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUKu-rQNtpeI6wyQqEML-fHRDBNcRYqLvo6w&usqp=CAU");
   background-position: center;
   background-repeat: no-repeat;
@@ -13,19 +12,62 @@ h2 {
   padding: 10px 20px;
   color: #575ed8;
 }
-.hooky-chat {
+#hooky-chat {
+  z-index: 10;
   max-width: 400px;
   margin: 30px auto;
   text-align: center;
-  /*border: 1px solid #ddd;*/
+  border: 4px solid black;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   background: rgb(142, 247, 138) /*#f9f9f9*/;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section span {
+  position: absolute;
+  bottom: -50px;
+  background: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+  animation: animate 8s linear infinite;
+}
+section span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(0.025) tranlate(-70%, -70%);
+  background: radial-gradient(transparent);
+  border-radius: 50%;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1200%);
+    opacity: 1;
+  }
 }
 
 .chat-window {
   height: 400px;
   overflow: auto;
+  /* border: 2px solid black; */
   border-radius: 10px;
   background: rgb(117, 248, 100) /*#f9f9f9*/;
 }
@@ -43,6 +85,7 @@ h2 {
   border-radius: 10px;
   margin-bottom: 3px;
   padding-left: 10px;
+  background-color: honeydew;
   color: rgb(245, 81, 81);
 }
 
@@ -75,12 +118,11 @@ input {
   padding: 10px 20px;
   box-sizing: border-box;
   background: #eee;
-  /*border: 1 px solid gray;*/
   border-radius: 5px;
+  border: none;
   display: block;
   width: 98%;
   background: #fff;
-  /*border-bottom: 1px solid #eee;*/
   font-family: Nunito;
   font-size: 16px;
   margin: 3px auto 3px auto;
@@ -90,12 +132,10 @@ input {
   padding: 10px 20px;
   box-sizing: border-box;
   background: #eee;
-  /*border: 1 px solid gray;*/
   border-radius: 5px;
   display: block;
   width: 98%;
   background: #fff;
-  /*border-bottom: 1px solid #eee;*/
   font-family: Nunito;
   font-size: 16px;
   margin: 3px auto 3px auto;
@@ -114,4 +154,11 @@ button {
 
 time {
   color: red;
+}
+
+.emojionearea.emojionearea-inline {
+  width: 90%;
+  font-size: 16px;
+  text-align: left;
+  margin: auto;
 }

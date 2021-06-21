@@ -19,15 +19,17 @@
 </head>
 
 <body>
-    <div class="hooky-chat">
-        <div class="chat-window">
-            <div id="output"></div>
-            <div id="feedback"></div>
+    <section>
+        <div id="hooky-chat">
+            <div class="chat-window">
+                <div id="output"></div>
+                <div id="feedback"></div>
+            </div>
+            <input id="handle" type='text' placeholder="Your name..." />
+            <input id="message" type='text' placeholder="Type message..." />
+            <button id="sendMessage">Send</button>
         </div>
-        <input id="handle" type='text' placeholder="Your name..." />
-        <input id="message" type='text' placeholder="Type message..." />
-        <button id="sendMessage">Send</button>
-    </div>
+    </section>
 
     <script src="/chat.js"></script>
     <script>
@@ -37,6 +39,25 @@
             });            
         })        
     </script>   
+    <script>
+        function createBubbles(){
+            const section = document.querySelector("section")
+            const createElement = document.createElement("span")
+            var size = Math.random() * 60;
+
+            createElement.style.width = 20 + size +"px";
+            createElement.style.height = 20 + size +"px";
+            createElement.style.left = Math.random() * innerWidth + "px";
+            section.appendChild(createElement);
+
+            setTimeout(() => {
+                createElement.remove()
+            },8000)
+        }
+
+        setInterval(createBubbles, 70);
+
+    </script>
 
 </body>
 
