@@ -1,0 +1,51 @@
+{
+    "name": "Poo's Chat",
+    "short_name": "PoosChat",
+    "start_url": "./public/index.html",
+    "display": "standalone",
+    "background_color": "#8ef78a",
+    "theme_color": "#575ed8",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/images/chat1.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/images/chat2.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/images/chat3.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "/images/chat4.png",
+            "type": "image/png",
+            "sizes": "152x152"
+        },
+        {
+            "src": "/images/chat5.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/images/chat6.png",
+            "type": "image/png",
+            "sizes": "384x384"
+        },
+        {
+            "src": "/images/chat7.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/images/chat8.png",
+            "type": "image/png",
+            "sizes": "128x128"
+        }
+    ]
+}
