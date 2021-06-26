@@ -1,6 +1,6 @@
 {
     "name": "Poo's Chat",
-    "short_name": "PoosChat",
+    "short_name": "Chat Box",
     "start_url": "./public/index.html",
     "display": "standalone",
     "background_color": "#8ef78a",
@@ -33,9 +33,10 @@
             "sizes": "192x192"
         },
         {
-            "src": "/images/chat6.png",
+            "src": "/images/maskable_icon.png",
             "type": "image/png",
-            "sizes": "384x384"
+            "sizes": "384x384",
+            "purpose": "any maskable"
         },
         {
             "src": "/images/chat7.png",
