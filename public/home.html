@@ -15,6 +15,8 @@
     <script src="./emojionearea.min.js"></script>
     <link rel="manifest" href="./manifest.json">
     <link rel="icon" href="./favicon.ico" >
+    <link rel="stylesheet" href="/public/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- ios support -->
     <link rel="apple-touch-icon" href="/images/chat2.png">
@@ -27,25 +29,20 @@
     <section>
         <div id="hooky-chat">
             <div class="chat-window">
-                <div id="output"></div>
-                <div id="feedback"></div>
-            </div>
-            <input id="handle" type='text' placeholder="Your name..." />
-            <input id="message" type='text' placeholder="Type message..." />
-            <button id="sendMessage">Send</button>
+            <div class= "chat-header">
+                <i class="fas fa-camera camera-icon"></i>
+                <div class="home-title">ChatBox</div>                
+                <div class="tabs tab1">Chat</div>
+                <div class="tabs tab2">Status</div>
+                <div class="tabs tab3">Calls</div>                
+                <!-- <i class="fas fa-video video-icon"></i> -->
+                <i class="fas fa-search search-icon"></i>
+                <i class="fas fa-ellipsis-v dots-menu"></i>
+            </div>            
+                <div id="output"></div>                
+            </div>            
         </div>
     </section>
-
-    <script src="/chat.js"></script>
-
-    <!-- add emoji feature -->
-    <script>
-        $(document).ready(function () {
-            $("#message").emojioneArea({
-                pickerPosition: "top"
-            });
-        });
-    </script>
 
     <!-- Add bubble animation -->
     <script>

@@ -1,16 +1,15 @@
-//using install service worker event
+//using install service worker event...
 
 const staticCacheName = "site-static-v1";
+const dynamicCache = "site-dynamic-v1";
 const assets = [
     "/",    
     "/chat.js",
-    "/index.html",
+    "/home.html",
     "/styles.css",    
     "/emojionearea.min.js", 
     "/emojionearea.min.css", 
-    "https://code.jquery.com/jquery-3.6.0.min.js",   
-    "https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js",
-           
+    "https://code.jquery.com/jquery-3.6.0.min.js",                 
 ];
 
 self.addEventListener("install", evt => {
@@ -30,21 +29,26 @@ self.addEventListener("activate", evt => {
     evt.waitUntil(
         caches.keys().then(keys => {
             console.log(keys);
-            // return Promise.all(keys
-            //     .filter(key => key !== staticCacheName)
-            //     .map(key => caches.delete(key))
-            //     )
+            return Promise.all(keys
+                .filter(key => key !== staticCacheName)
+                .map(key => caches.delete(key))
+                )
         })
     )
 });
 
-//listen for fetch event
+//listen for fetch event and add other pages to new cache as user browses
 
 self.addEventListener("fetch", evt => {
     console.log("fetch event", evt);
     evt.respondWith(
         caches.match(evt.request).then(cacheRes => {
-            return cacheRes || fetch(evt.request);
+            return cacheRes || fetch(evt.request).then(fetchRes => {
+                return caches.open(dynamicCache).then(cache => {
+                    cache.put(evt.request.url, fetchRes.clone());
+                    return fetchRes
+                })
+            });
         })
     );
 });

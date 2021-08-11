@@ -50,6 +50,55 @@ section span:before {
   border-radius: 50%;
 }
 
+.chat-header {
+  display: flex;
+  background-color: #1ecbe1;
+  border: 1px solid black, 0, 1px solid black, 0;
+  position: relative;
+  text-align: left;
+  font-size: 18px;
+  height: 80px;
+  top: 20px;
+}
+
+.home-title {
+  display: inline-block;
+  margin: 5px;
+  font-size: 25px;
+}
+
+.camera-icon {
+  align-self: flex-end;
+  margin: 5px;
+}
+
+.video-icon {
+}
+
+.search-icon {
+  margin-top: 10px;
+  padding-left: 30px;
+}
+
+.dots-menu {
+  margin-top: 10px;
+  padding-left: 25px;
+}
+
+.tabs {
+  align-self: flex-end;
+  padding-left: 20px;
+  margin-bottom: 3px;
+}
+.tab1 {
+  padding-left: 0px;
+  border-bottom: 3px solid black;
+}
+.tab2 {
+}
+.tab3 {
+}
+
 @keyframes animate {
   0% {
     transform: translateY(0%);
