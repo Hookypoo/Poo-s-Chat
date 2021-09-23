@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js">
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./emojionearea.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        </script>
+    <script src="./emojionearea.min.js"></script>
+    <link rel="manifest" href="./manifest.json">
+    <link rel="icon" href="./favicon.ico" >
+    <link rel="stylesheet" href="/public/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="/images/chat2.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#575ed8">
+    <meta name="theme-color" content="#575ed8">
+    <title>Poo's-Chat</title>
+</head>
+        <!-- time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: "2-digit" }); -->
+<body>   
+    <section>        
+        <div id="hooky-chat">
+            <div class="chat-window">
+            <div class= "chat-header">
+                <i class="fas fa-camera camera-icon"></i>
+                <div class="home-title">Poo's Chat</div>                
+                <div class="tabs tab1">Chat</div>
+                <div class="tabs tab2">Status</div>
+                <div class="tabs tab3">Calls</div>                
+                <!-- <i class="fas fa-video video-icon"></i> -->
+                <i class="fas fa-search search-icon"></i>
+                <i class="fas fa-ellipsis-v dots-menu"></i>
+            </div>
+                <div class = "contacts-home">                   
+                        <div class="contact-info">
+                                <div class="contact-avatar">
+                                    <img class="contact-img"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRcfxxRI4jXAzgxe8UqTZVsdH8BJU52o8ZEVg&usqp=CAU" alt="contact photo">
+                                        </div>
+                                     <div class="contact-name">
+                                        <h4>Hookypoo</h4>                                        
+                                    </div>
+                                   <div class="contact-message"><p>last message info here and container strecthes</p></div>
+                                   <time>10:23</time>
+                                </div> 
+                            <div class="contact-info">
+                                <div class="contact-avatar">
+                                    <img class="contact-img"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLiF6UAeVG_1OnM1iYxknpbIvZp_wCBdef_w&usqp=CAU" alt="contact photo">
+                                </div>
+                                <div class="contact-name">
+                                    <h4>FP FC Ballers</h4>                                    
+                                </div>
+                                <div class="contact-message"><p>last message info here</p></div>
+                                <time>18:23</time>
+                            </div> 
+                            <div id="contact-info3">
+                                <div class="contact-avatar">
+                                    <i class="fas fa-user fa-2x contact-img3"></i>
+                                    <!-- <img class="contact-img"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXakmReyXHAsPoabpAUCUSa_A8FFdzLUFKYA&usqp=CAU" alt="contact photo"> -->
+                                </div>
+                                <div class="contact-name">
+                                    <h4>EL Speedo</h4>                                  
+                                </div>
+                                <div class="contact-message"><p>last message info here and container strecthes</p></div>
+                                <time>12:30</time>
+                            </div>  
+                            <div class="contact-info">
+                                <div class="contact-avatar">
+                                    <img class="contact-img"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLiF6UAeVG_1OnM1iYxknpbIvZp_wCBdef_w&usqp=CAU" alt="contact photo">
+                                </div>
+                                <div class="contact-name">
+                                    <h4>FP FC Ballers</h4>                                    
+                                </div>
+                                <div class="contact-message"><p>last message info here</p></div>
+                                <time>18:23</time>
+                            </div> 
+                            <div id="contact-info3">
+                                <div class="contact-avatar">
+                                    <i class="fas fa-user fa-2x contact-img3"></i>
+                                    <!-- <img class="contact-img"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSXakmReyXHAsPoabpAUCUSa_A8FFdzLUFKYA&usqp=CAU" alt="contact photo"> -->
+                                </div>
+                                <div class="contact-name">
+                                    <h4>EL Speedo</h4>                                  
+                                </div>
+                                <div class="contact-message"><p>last message info here and container strecthes</p></div>
+                                <time>12:30</time>
+                            </div>                               
+                        <a href="./chatroom.html"><div class="new-contact"></div></a>                
+                    </div>            
+                </div>
+            </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" 
+    integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/chatspage.js"></script>
+    <!-- <script src="/chat.js"></script> -->
+
+    <!-- Add bubble animation -->
+    <script>
+        function createBubbles() {
+            const section = document.querySelector("section")
+            const createElement = document.createElement("span")
+            var size = Math.random() * 60;
+
+            createElement.style.width = 20 + size + "px";
+            createElement.style.height = 20 + size + "px";
+            createElement.style.left = Math.random() * innerWidth + "px";
+            section.appendChild(createElement);
+
+            setTimeout(() => {
+                createElement.remove()
+            }, 8000)
+        }
+
+        setInterval(createBubbles, 70);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 {
     "name": "Poo's Chat",
     "short_name": "Chat Box",
-    "start_url": "home.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#8ef78a",
     "theme_color": "#575ed8",

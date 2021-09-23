@@ -26,23 +26,49 @@
 </head>
 
 <body>
-    <section>
+    
+    <section>       
         <div id="hooky-chat">
             <div class="chat-window">
-            <div class= "chat-header">
-                <i class="fas fa-camera camera-icon"></i>
-                <div class="home-title">ChatBox</div>                
-                <div class="tabs tab1">Chat</div>
-                <div class="tabs tab2">Status</div>
-                <div class="tabs tab3">Calls</div>                
-                <!-- <i class="fas fa-video video-icon"></i> -->
-                <i class="fas fa-search search-icon"></i>
-                <i class="fas fa-ellipsis-v dots-menu"></i>
-            </div>            
-                <div id="output"></div>                
-            </div>            
+                <header>
+                    <div class= "chat-room-header">  
+                        <a href="./chatspage.html"><i class="fas fa-arrow-left arrow-left-icon"></i></a>                      
+                        <div class="contact-room-avatar">
+                            <i class="fas fa-user fa-2x contact-room-img3"></i>                            
+                        </div>
+                        <div class="contact-room-name">
+                            <h4>Dribbler</h4>                                  
+                        </div>                                                    
+                        <div class="room-header-icons">
+                            <i class="fas fa-video video-icon"></i>
+                            <i class="fas fa-phone-alt phone-icon"></i>
+                            <i class="fas fa-ellipsis-v room-dots-menu"></i>
+                        </div>                        
+                    </div>
+                </header>
+                <div id="output"></div>
+                <div id="feedback"></div>
+            </div>
+            <!-- remove this handle  input later in final page design 
+            <input id="handle" type='text' placeholder="Your name..." /> --> 
+            <input id="message" type='text' placeholder="Type message..." />
+            <button id="sendMessage">Send <i class="fas fa-camera camera-icon"></i>
+                <i class="fas fa-microphone microphone-icon"></i>
+                <i class="fas fa-paperclip paperclip-icon"></i>
+            </button>
         </div>
     </section>
+    <script src="/chatspage.js"></script>
+    <!-- <script src="/chat.js"></script> -->
+
+    <!-- add emoji feature -->
+    <script>
+        $(document).ready(function () {
+            $("#message").emojioneArea({
+                pickerPosition: "top"
+            });
+        });
+    </script>
 
     <!-- Add bubble animation -->
     <script>

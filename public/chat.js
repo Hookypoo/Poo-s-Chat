@@ -11,13 +11,17 @@ const socket = io.connect("http://localhost:4000");
 
 //Querying the DOM
 const message = document.getElementById("message");
-const handle = document.getElementById("handle");
+const handle = document.getElementById("handle"); 
 const output = document.getElementById("output");
 const btn = document.getElementById("sendMessage");
 const feedback = document.getElementById("feedback");
+//replace handle above from chatroom.html with userhandle below coming in from index.html page below.
+const userhandle = document.getElementById("user-handle");
 
 
-//emit events from front end to 
+
+
+//emit events to server from front end 
 
 let time;
 
@@ -42,7 +46,7 @@ socket.on("chat", function (data) {
 });
 
 socket.on("typing", function (data) {
-    feedback.innerHTML = "<p><em>" + data + " " + " is typing a message....</em></p>";
+    feedback.innerHTML = "<p><em>" + data.handle + " " + " is typing a message....</em></p>";
 })
 
 // Registering service worker

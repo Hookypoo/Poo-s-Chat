@@ -25,49 +25,16 @@
 
 <body>
     <section>
-        <div id="hooky-chat">
-            <div class="chat-window">
-                <div id="output"></div>
-                <div id="feedback"></div>
+        <form id="join-chat" action="chatsPage.html">
+            <div id="get-username">           
+                <input id="user-handle" name="username" type='text' placeholder="Enter Username..."required autocomplete="off"/>            
             </div>
-            <input id="handle" type='text' placeholder="Your name..." />
-            <input id="message" type='text' placeholder="Type message..." />
-            <button id="sendMessage">Send</button>
-        </div>
-    </section>
-
-    <script src="/chat.js"></script>
-
-    <!-- add emoji feature -->
-    <script>
-        $(document).ready(function () {
-            $("#message").emojioneArea({
-                pickerPosition: "top"
-            });
-        });
-    </script>
-
-    <!-- Add bubble animation -->
-    <script>
-        function createBubbles() {
-            const section = document.querySelector("section")
-            const createElement = document.createElement("span")
-            var size = Math.random() * 60;
-
-            createElement.style.width = 20 + size + "px";
-            createElement.style.height = 20 + size + "px";
-            createElement.style.left = Math.random() * innerWidth + "px";
-            section.appendChild(createElement);
-
-            setTimeout(() => {
-                createElement.remove()
-            }, 8000)
-        }
-
-        setInterval(createBubbles, 70);
-
-    </script>
-
+                <button id="submit-username" type="submit" class="sendMessage">Join Chat</button>
+        </form>
+    </section>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js" 
+    integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/chatpage.js"></script>
 </body>
-
 </html>

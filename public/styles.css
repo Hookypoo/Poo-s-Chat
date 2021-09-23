@@ -5,6 +5,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 h2 {
@@ -20,7 +21,7 @@ h2 {
   border: 4px solid black;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
-  background: rgb(142, 247, 138) /*#f9f9f9*/;
+  background: rgb(142, 247, 138) /*#8ef78a*/;
 }
 section {
   position: relative;
@@ -52,12 +53,32 @@ section span:before {
 
 .chat-header {
   display: flex;
-  background-color: #1ecbe1;
+  background-color: #c5f78a; /*#fa9536*/
   border: 1px solid black, 0, 1px solid black, 0;
   position: relative;
   text-align: left;
   font-size: 18px;
-  height: 80px;
+  height: 70px;
+  top: 0px;
+}
+
+.room-header-icons {    
+  font-size: 15px;
+  align-items: center; 
+  position: absolute;
+  right: 5px;
+  color: white;
+}
+
+.chat-room-header {
+  display: flex;
+  background-color: #c5f78a; /*#fa9536*/
+  border: 1px solid black, 0, 1px solid black, 0;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  font-size: 18px;
+  height: 60px;
   top: 20px;
 }
 
@@ -67,12 +88,62 @@ section span:before {
   font-size: 25px;
 }
 
+.arrow-left-icon {
+  padding-left: 5px;
+  padding-top: 10px;
+  color: #1a7e17;
+}
+
+.contact-room-avatar {    
+  padding: 10px;    
+  flex-basis: 1;
+  font-size: 12px;    
+}
+
+.contact-room-img3 {    
+  margin: auto;
+  padding: 10x, 0;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  color: blue;
+  align-self: center;
+  background-color: white;
+}
+
+.contact-room-name {
+  margin-top: 0px;
+  color: #1a7e17;
+  min-width: 70px;  
+}
+
+.video-icon {
+color: #1a7e17;
+font-size: 15px;
+}
+
+.phone-icon {
+  padding-left: 20px;
+ color: #1a7e17;
+ font-size: 15px;
+}
+
+.room-dots-menu {
+  color: #1a7e17;
+  font-size: 15px;
+  margin-top: 10px;
+  padding-left: 25px;
+}
+
 .camera-icon {
   align-self: flex-end;
   margin: 5px;
 }
+.microphone-icon {
 
-.video-icon {
+}
+.paperclip-icon {
+  
 }
 
 .search-icon {
@@ -92,11 +163,107 @@ section span:before {
 }
 .tab1 {
   padding-left: 0px;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid #f78a8e;
+  color: #f78a8e;
 }
 .tab2 {
 }
 .tab3 {
+}
+
+.contact-info {
+  position: relative;
+  display: flex;
+  min-height: 60px;
+  background-color: greenyellow;
+  margin-top: 20px;
+  align-items: center;
+}
+
+#contact-info3 {
+  position: relative;
+  display: flex;
+  min-height: 60px;
+  background-color: greenyellow;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.contact-avatar {
+  padding-left: 5px;
+  flex-basis: 1;
+}
+.contact-img {
+  margin: auto;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  align-self: baseline;
+}
+
+.contact-img3 {
+  margin: auto;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  align-self: baseline;
+  background-color: white;
+}
+
+.contact-name {
+  min-width: 70px;
+  padding-top: 2px;
+  align-self: start;
+}
+
+.contact-name h4 {
+  font-size: 14px;
+  margin: 0px; 
+}
+
+.contact-message {
+  position: absolute;
+  left: 45px;
+  align-self: flex-end;
+  min-height: 20px;
+  max-width: 75%;
+  text-align: center;
+}
+
+.contact-message p {
+  padding-left: 0px;
+  font-size: 14px;
+  color: gray;
+  margin: 0px;
+}
+
+.contact-info time {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: gray;
+}
+
+/* width */ 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #13bf0d; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1a7e17; 
 }
 
 @keyframes animate {
@@ -118,7 +285,7 @@ section span:before {
   overflow: auto;
   /* border: 2px solid black; */
   border-radius: 10px;
-  background: rgb(117, 248, 100) /*#f9f9f9*/;
+  background: rgb(117, 248, 100); /*#f9f9f9*/
 }
 #output {
   /* position: relative; */

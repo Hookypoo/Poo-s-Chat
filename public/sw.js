@@ -1,11 +1,15 @@
-//using install service worker event...
+//using install service worker event............?
 
 const staticCacheName = "site-static-v1";
 const dynamicCache = "site-dynamic-v1";
 const assets = [
     "/",    
     "/chat.js",
-    "/home.html",
+    "/chatroom.html",
+    "/chatspage.html",
+    "/chatspage.js",
+    "/index.html",
+    "/index.js",    
     "/styles.css",    
     "/emojionearea.min.js", 
     "/emojionearea.min.css", 
@@ -13,7 +17,7 @@ const assets = [
 ];
 
 self.addEventListener("install", evt => {
-    //console.log("service worker has been installed");
+    //console.log("service worker has been installed...");
     evt.waitUntil(
         caches.open(staticCacheName).then(cache => {
             console.log("caching shell assets");
