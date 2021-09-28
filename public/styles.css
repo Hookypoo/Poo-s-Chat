@@ -79,7 +79,7 @@ section span:before {
   align-items: center;
   font-size: 18px;
   height: 60px;
-  top: 20px;
+  top: 0px;
 }
 
 .home-title {
