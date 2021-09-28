@@ -2,7 +2,7 @@
 const socket = io.connect("http://localhost:4000");
 
 //Querying the DOM
-
+const contactTitle = document.getElementById("contact-Title");
 const message = document.getElementById("message");
 const btn = document.getElementById("sendMessage");
 const output = document.getElementById("output");
@@ -33,7 +33,7 @@ btn.addEventListener("click", (e) => {
 
 let names = JSON.parse(localStorage.getItem("userHandle"));
     console.log(names + " " + "Rules");
-
+    contactTitle.innerHTML = "<strong>" + names + "</strong>";
 //.......................................Listen for events coming back from server....................................
 
 socket.on("newUser", username => {    
@@ -42,7 +42,8 @@ socket.on("newUser", username => {
 
     socket.on("chat",function(data) {         
         feedback.innerHTML = "";
-        output.innerHTML += "<p><strong>" + names + ":" + " " + "</strong>" + data.message + " " + "<time>" + time + "</time>" + "</p>";
+        output.innerHTML += "<p><strong>" + names + ":" + "   " + "</strong>" + data.message + " " + "<time>" + time + "</time>" + "</p>";
+        
     });    
    
 // socket.on("typing", function (data) {
