@@ -3,6 +3,7 @@ const message = document.getElementById("message");
 const output = document.getElementById("output");
 const newContact = document.getElementById("new-contact");
 const btn = document.getElementById("sendMessage");
+const indexBtn = document.getElementById("submit-username");
 const feedback = document.getElementById("feedback");
 
 
@@ -10,12 +11,12 @@ const feedback = document.getElementById("feedback");
 const { username } = Qs.parse(location.search, { 
     ignoreQueryPrefix: true
     });
-   // console.log(username);
+//console.log(username);
 //.................................................Get and share username with chat.js...............................
 
-let userTitle = { username };
+let userTitle =  username;
 
-let userHandle = JSON.stringify(userTitle.username);
+let userHandle = JSON.stringify(userTitle);
     console.log(userHandle);
     localStorage.setItem("userHandle", userHandle);
 
@@ -43,7 +44,9 @@ socket.emit("newUser",  username );
 socket.on("newUser", username => {
     outputUser(username);
     //console.log(username)    
-    //newContact.scrollTop = newContact.scrollHeight;
+
+    //scroll Down
+    newContact.scrollTop = newContact.scrollHeight;
 });
 
 //output or display a new user to main chatroom with all other users 

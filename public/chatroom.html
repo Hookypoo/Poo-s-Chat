@@ -30,34 +30,30 @@
     <section>       
         <div id="hooky-chat">
             <div class="chat-window">
-                <header>
-                    <div class= "chat-room-header">  
-                        <a href="./chatspage.html"><i class="fas fa-arrow-left arrow-left-icon"></i></a>                      
-                        <div class="contact-room-avatar">
-                            <i class="fas fa-user fa-2x contact-room-img3"></i>                            
-                        </div>
-                        <div class="contact-room-name">
-                            <h4 id="contact-Title"></h4>                                  
-                        </div>                                                    
-                        <div class="room-header-icons">
-                            <i class="fas fa-video video-icon"></i>
-                            <i class="fas fa-phone-alt phone-icon"></i>
-                            <i class="fas fa-ellipsis-v room-dots-menu"></i>
-                        </div>                        
-                    </div>
+                <header class="room-header">                      
+                    <a href="./chatspage.html"><i class="fas fa-arrow-left arrow-left-icon"></i></a>                
+                    <i class="fas fa-user  contact-room-img3 contact-room-avatar"></i>                            
+                    <h4 id="contact-Title"></h4>                    
+                    <i class="fas fa-video video-icon"></i>
+                    <i class="fas fa-phone-alt phone-icon"></i>
+                    <i class="fas fa-ellipsis-v room-dots-menu"></i>                                                       
                 </header>
                 <div id="output"></div>
                 <div id="feedback"></div>
-            </div>                      
-                <input id="message" type='text' placeholder="Type message..." />
-                <button id="sendMessage">Send <i class="fas fa-camera camera-icon"></i>
-                    <i class="fas fa-microphone microphone-icon"></i>
-                    <i class="fas fa-paperclip paperclip-icon"></i>
-                </button>        
+            </div>
+                <form id="room-form">                      
+                    <input id="message" type='text' placeholder="Type message..." />
+                    <button id="sendMessage">Send <i class="fas fa-camera camera-icon"></i>
+                        <i class="fas fa-microphone microphone-icon"></i>
+                        <i class="fas fa-paperclip paperclip-icon"></i>
+                    </button>
+                </form>        
         </div>
-    </section>
-    <!-- <script src="/chatspage.js"></script>  -->
-    <script src="/chat.js"></script>
+    </section>    
+    <script src="/chat.js"></script>   
+    
+
+
 
     <!-- add emoji feature -->
     <script>
@@ -87,8 +83,27 @@
 
         setInterval(createBubbles, 70);
 
-    </script>
+      </script>
 
-</body>
+  </body>
 
 </html>
+
+
+
+<!-- 
+    <div class= "chat-room-header" >  
+                        <a href="./chatspage.html"><i class="fas fa-arrow-left arrow-left-icon"></i></a>                      
+                        <div class="contact-room-avatar">
+                            <i class="fas fa-user fa-2x contact-room-img3"></i>                            
+                        </div>
+                        <div class="contact-room-name">
+                            <h4 id="contact-Title"></h4>                                  
+                        </div>                                                    
+                        <div class="room-header-icons">
+                            <i class="fas fa-video video-icon"></i>
+                            <i class="fas fa-phone-alt phone-icon"></i>
+                            <i class="fas fa-ellipsis-v room-dots-menu"></i>
+                        </div>                                               
+                    </div>  
+ -->

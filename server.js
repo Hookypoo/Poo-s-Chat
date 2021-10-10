@@ -29,6 +29,10 @@ io.on("connection", function (socket) {
         io.sockets.emit("chat", data);            
     });
 
+    socket.on("clear", function (data) {
+        io.sockets.emit("clear", data);            
+    });
+
     socket.on("typing", function(data){
         socket.broadcast.emit("typing", data);
     });    
