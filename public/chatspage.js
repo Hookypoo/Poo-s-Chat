@@ -22,9 +22,9 @@ let userHandle = JSON.stringify(userTitle);
 
 
 //message submit
-// userhandle.addEventListener("submit", (e) => {
-//     e.preventDefault();
-// });
+userhandle.addEventListener("submit", (e) => {
+    e.preventDefault();
+});
 
 //get message text
 // const handle = e.target.elements.user-handle.value;
@@ -46,7 +46,7 @@ socket.on("newUser", username => {
     //console.log(username)    
 
     //scroll Down
-    newContact.scrollTop = newContact.scrollHeight;
+   // newContact.scrollTop = newContact.scrollHeight;
 });
 
 //output or display a new user to main chatroom with all other users 

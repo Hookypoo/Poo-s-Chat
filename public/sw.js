@@ -1,4 +1,4 @@
-//using install service worker event..............?
+//using install service worker event.....................?
 
 const staticCacheName = "site-static-v1";
 const dynamicCache = "site-dynamic-v1";

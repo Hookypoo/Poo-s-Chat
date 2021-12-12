@@ -18,7 +18,7 @@ h2 {
   width: 400px;
   margin: 30px auto;
   text-align: center;
-  border: 4px solid black;
+  border: 2px solid black;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   background: rgb(142, 247, 138) /*#8ef78a*/;
@@ -55,10 +55,11 @@ section span:before {
   display: flex;
   background-color: #c5f78a; /*#fa9536*/
   border: 1px solid black, 0, 1px solid black, 0;
-  position: relative;
+  position: sticky;
   text-align: left;
   font-size: 18px;
   height: 70px;
+  z-index: 10;
   top: 0px;
 }
 
@@ -104,8 +105,7 @@ section span:before {
 .home-title {
   display: inline-block;
   margin: 5px;
-  font-size: 25px;
-  border: 1px solid blue
+  font-size: 25px;  
 }
 
 .contact-room-img3 {    
@@ -167,13 +167,25 @@ section span:before {
 }
 
 .camera-icon {
+  position: relative;
+  left: 15px;
+  font-size: 18px;
   align-self: flex-end;
   margin: 5px;
+  color: #1a7e17; 
 }
 .microphone-icon {
+  position: relative;
+  left: 35px;
+  font-size: 18px;
+  color: #1a7e17; 
 
 }
 .paperclip-icon {
+  position: relative;
+  left: 55px;
+  font-size: 18px;
+  color: #1a7e17; 
   
 }
 
@@ -197,10 +209,6 @@ section span:before {
   border-bottom: 3px solid #f78a8e;
   color: #f78a8e;
 }
-.tab2 {
-}
-.tab3 {
-}
 
 .contact-info {
   position: relative;
@@ -209,6 +217,7 @@ section span:before {
   background-color: greenyellow;
   margin-top: 20px;
   align-items: center;
+  
 }
 
 #contact-info3 {
@@ -390,10 +399,6 @@ button {
   width: 50%;
   border-radius: 5px;
   margin: 10px 0 10px 0;
-}
-
-time {
-  color: red;
 }
 
 .emojionearea.emojionearea-inline {
